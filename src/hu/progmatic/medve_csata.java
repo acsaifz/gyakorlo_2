@@ -2,11 +2,13 @@ package hu.progmatic;
 
 public class medve_csata {
     public static void main(String[] args) {
-	    int hp1 = 150;
-        int ap1 = 85;
-        int hp2 = 170;
-        int ap2 = 75;
+        bearBattle(100,10,80,50);
+        bearBattle(200,30,200,20);
+        bearBattle(100,30,110,30);
+        bearBattle(150,85,170,75);
+    }
 
+    public static void bearBattle(int hp1, int ap1, int hp2, int ap2){
         do{
             hp1 -= ap2;
             hp2 -= ap1;
@@ -19,5 +21,6 @@ public class medve_csata {
         }else {
             System.out.println((hp1 > hp2 ? "Első " : "Második") + " medve nyert!");
         }
+        System.out.println("---------------------------------------");
     }
 }
